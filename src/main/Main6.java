@@ -1,9 +1,12 @@
 package main;
 
 import java.io.FileReader;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 public class Main6 {
@@ -28,6 +31,12 @@ public class Main6 {
 			String [] niz = actors.get(0).getAsString().split(" ");
 			System.out.println(niz[1]);
 
+			Set<Entry<String, JsonElement>> es = m.entrySet();
+			
+			for (Entry<String, JsonElement> e : es) {
+				System.out.println(e);
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
